@@ -2,18 +2,27 @@
 import React from 'react'
 import Home from './Home'
 import './App.css'
+import C from './C'
+import Navbar from './Navbar'
+import { Routes, Route } from "react-router-dom"
+import About from './About'
+import Contact from './Contact'
 const App = () => {
+
   return (
     <div>
-      <h1 className='two'   id='one'> helllo</h1>
-      <ul>
-        <li> hello</li>
-        <li> hello</li>
-        <li> hello</li>
-        <li> hello</li>
-        <li> hello</li>
-      </ul>
-      <Home/>
+     
+<Navbar/>
+<Routes>
+
+<Route   path='/'  element={<Home/>}  />
+<Route   path='/about'  element={<About/>}  />
+<Route   path='/contact'  element={<Contact/>}  />
+
+
+</Routes>
+   {/* <Navbar/> */}
+      
     </div>
   )
 }

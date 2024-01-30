@@ -1,3 +1,5 @@
-#one{
-  color: fuchsia;
+ul{
+
+  display: flex;
+  justify-content: space-between;
 }
