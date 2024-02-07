@@ -115,8 +115,6 @@
 
 // export default Home
 
-
-
 import React, { useEffect, useState } from 'react'
 
 const Home = () => {
@@ -140,12 +138,23 @@ const Home = () => {
      }
   return (
     
-    <div>
+    <div className='row'> 
 
      {
       res.map((data)=>{
         return(<>
-        <h2 className='tow'>    {data.title}</h2>
+        <div className='col-lg-3'>  
+<div class="card "    style={{width:300}} >
+  <img src={data.images[1]} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <h5 class="card-title">{data.title}</h5>
+    <p class="card-text">{data.description}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+        {/* <h2 className='tow'>    {data.title}</h2> */}
         </>)
 
       })
